@@ -2,21 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af74f848-b480-493d-ad60-18ca09900185" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/TextDatasetAnalyzer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/check_dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/text_analyzer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/text_viewer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/cn_dario_train" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/cn_example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/en_example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/Concreteness_ratings_Brysbaert_et_al_BRM.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/Concreteness_ratings_cn_bigrams.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/cn_baidu_stopwords" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/en_nltk_baidu_stopwords" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/check_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/check_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/text_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/text_analyzer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/cn_dario_train" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +37,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -54,6 +51,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/data" />
     </key>
   </component>
@@ -79,5 +77,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1642145809142" />
+    <state x="421" y="176" width="598" height="548" key="find.popup" timestamp="1642487432193">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="421" y="176" width="598" height="548" key="find.popup/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1642487432193" />
   </component>
 </project>

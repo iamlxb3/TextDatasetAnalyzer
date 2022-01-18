@@ -22,6 +22,11 @@ class TextAnalyzer:
         self.do_lower = do_lower
         self.language = language
         self.load_spacy_model = load_spacy_model
+        self.pickle_dir = '../spacy_temp'
+
+        if not os.path.isdir(self.pickle_dir):
+            os.makedirs(self.pickle_dir)
+            print(f"Make new dirs {self.pickle_dir} for pickling temp spacy results")
 
         if load_spacy_model:
             if language == 'cn':
@@ -56,6 +61,12 @@ class TextAnalyzer:
                 texts.append(line.strip())
 
         self.compute_ngram_distinct(texts)
+
+    def check_basic(self, texts):
+        unique_tokens = len(set([x for text in texts for x in text.split()]))
+        avg_sen_len = np.average([len(text.split()) for text in texts])
+        print(f"[Dataset basic] Number of unique tokens: {unique_tokens}, average sentence length: {avg_sen_len:.3f}")
+        return unique_tokens, avg_sen_len
 
     def compute_ngram_distinct(self, texts, n_grams=(1, 2, 3)):
         result = {'ngram': [], 'distinct': []}
@@ -126,13 +137,14 @@ class TextAnalyzer:
 
             token_pickle_path = self._get_token_pickle_path(text_pickle_path)
             if os.path.isfile(text_pickle_path) and os.path.isfile(token_pickle_path):
-                pos_tags, tokens = pickle.load(open(text_pickle_path, 'rb')), pickle.load(
-                    open(token_pickle_path, 'rb'))
+                pos_tags, tokens = pickle.load(open(text_pickle_path, 'rb')), \
+                                   pickle.load(open(token_pickle_path, 'rb'))
             else:
-                spacy_parse_result = self._spacy_parse_text(to_parse_text, 'pos', text_pickle_path,
-                                                            return_token=True,
+                spacy_parse_result = self._spacy_parse_text(to_parse_text,
+                                                            'pos',
+                                                            text_pickle_path,
                                                             dump_res=True,
-                                                            dump_token=True)
+                                                            return_token=True)
                 if spacy_parse_result is not None:
                     pos_tags, tokens = spacy_parse_result
                 else:
@@ -271,10 +283,10 @@ class TextAnalyzer:
             'lang'] + '_' + self.benepar_model
         # text_analyzer2
         text_md5 = hashlib.md5(f'{save_prefix}_{model_name}_{to_parse_text}_{parse_choice}'.encode()).hexdigest()
-        text_pickle_path = f'../spacy_temp/{text_md5}.pkl'
+        text_pickle_path = os.path.join(self.pickle_dir, f'{text_md5}.pkl')
         return text_pickle_path, to_parse_text
 
-    def load_parsed_texts_by_spacy(self, texts, parse_choice):
+    def load_parsed_texts_by_spacy(self, texts, parse_choice, dump_res=False):
         assert self.spacy_parser is not None
         assert parse_choice in {'pos', 'ner', 'dep'}
 
@@ -292,9 +304,15 @@ class TextAnalyzer:
                     parse_text = pickle.load(open(text_pickle_path, 'rb'))
                 except Exception as e:
                     print(f'Pickle exception: {e}')
-                    parse_text = self._spacy_parse_text(to_parse_text, parse_choice, text_pickle_path)
+                    parse_text = self._spacy_parse_text(to_parse_text,
+                                                        parse_choice,
+                                                        text_pickle_path,
+                                                        dump_res=dump_res)
             else:
-                parse_text = self._spacy_parse_text(to_parse_text, parse_choice, text_pickle_path)
+                parse_text = self._spacy_parse_text(to_parse_text,
+                                                    parse_choice,
+                                                    text_pickle_path,
+                                                    dump_res=dump_res)
             if parse_text is None:
                 continue
             else:
@@ -303,4 +321,6 @@ class TextAnalyzer:
         all_results = collections.Counter(all_results)
         total_count = np.sum(list(all_results.values()))
         all_results = {k: v / total_count for k, v in all_results.items()}
-        return all_results
+        df_result = pd.DataFrame(all_results.items())
+        df_result = df_result.sort_values(df_result.columns[1], ascending=False)
+        return df_result
