@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af74f848-b480-493d-ad60-18ca09900185" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/cn_example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/en_example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/Concreteness_ratings_Brysbaert_et_al_BRM.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/Concreteness_ratings_cn_bigrams.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/cn_baidu_stopwords" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/en_nltk_baidu_stopwords" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figures/Concretness_ADJ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figures/Concretness_ADV.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figures/Concretness_NOUN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figures/Concretness_VERB.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figures/stopword_dis.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figures/zipflaw-top100-1_gram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figures/zipflaw-top100-2_gram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/check_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/check_dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/text_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/text_analyzer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cn_dario_train" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/text_viewer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/en_example2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/en_example" beforeDir="false" afterPath="$PROJECT_DIR$/data/en_example1" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +51,9 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/figures" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/data" />

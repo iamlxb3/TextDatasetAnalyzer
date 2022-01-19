@@ -19,7 +19,8 @@ __VALID_ASPECT_CHOICES = ('distinct', 'basic', 'pos', 'dep', 'ner', 'stopword', 
 # python check_dataset.py --path ../data/cn_example --aspects zipflaw --lang cn --sample_N 10 --n_grams 1 2
 # python check_dataset.py --path ../data/cn_example --aspects concreteness --lang cn --sample_N 10
 # python check_dataset.py --path ../data/cn_example --aspects all --lang cn --n_grams 1 2 --sample_N 10
-# python check_dataset.py --path ../data/en_example --aspects all --lang en --n_grams 1 2 --sample_N 10
+# python check_dataset.py --path ../data/en_example1 --aspects all --lang en --n_grams 1 2
+# python check_dataset.py --path ../data/en_example2 --aspects all --lang en --n_grams 1 2
 
 def args_parse():
     parser = argparse.ArgumentParser(description='description')
