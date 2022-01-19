@@ -64,13 +64,13 @@ You only have to modify 'data_path1' and 'data_path2' in each cell. Below we sho
 - Distribution of stopwords:
 <img src="figures/stopword_dis.png">
 - Plots of zipf's law:
-![](figures/zipflaw-top100-1_gram.png)
-![](figures/zipflaw-top100-2_gram.png)
+<img src="figures/zipflaw-top100-1_gram.png">
+<img src="figures/zipflaw-top100-2_gram.png">
 - Plots of Concretness values for different POS:
-![](figures/Concretness_NOUN.png)
-![](figures/Concretness_VERB.png)
-![](figures/Concretness_ADJ.png)
-![](figures/Concretness_ADV.png)
+<img src="figures/Concretness_NOUN.png">
+<img src="figures/Concretness_VERB.png">
+<img src="figures/Concretness_ADJ.png">
+<img src="figures/Concretness_ADV.png">
 
 ## Future work (Pull request is welcome)
 - Support more languages
