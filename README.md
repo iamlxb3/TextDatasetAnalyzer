@@ -62,7 +62,7 @@ python check_dataset.py --path ../data/en_example2 --aspects all --lang en --n_g
 Now you can open **vis.ipynb** in Jupterlab and visualize the distribution of stopwords/concretness and Zipf law curve.
 You only have to modify 'data_path1' and 'data_path2' in each cell. Below we show some examples:
 - Distribution of stopwords:
-![](figures/stopword_dis.png)
+<img src="figures/stopword_dis.png">
 - Plots of zipf's law:
 ![](figures/zipflaw-top100-1_gram.png)
 ![](figures/zipflaw-top100-2_gram.png)
