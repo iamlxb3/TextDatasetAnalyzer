@@ -60,7 +60,7 @@ To compare multiple datasets, you have to analyse each dataset before hand.
 python check_dataset.py --path ../data/en_example1 --aspects all --lang en --n_grams 1 2
 python check_dataset.py --path ../data/en_example2 --aspects all --lang en --n_grams 1 2
 ```
-Now you can open **vis.ipynb** in Jupterlab and visualize the distribution of stopwords/concretness and Zipf law curve.
+Now you can open **vis.ipynb** in Jupterlab and visualize the distribution of stopwords/concretness and the curve of Zipf's law.
 You only have to modify 'data_path1' and 'data_path2' in each cell. Below we show some examples:
 - Distribution of stopwords:
 <img src="figures/stopword_dis.png">
