@@ -10,7 +10,7 @@ The scripts are only tested on English and Chinese, though it can be easily exte
 - conda create -n myenv python=3.6.8
 - source activate myenv
 - pip install -r requirements.txt
-- Corresponding spacy [8] and benepar [9] models need to be downloaded. Spacy:zh_core_web_trf, en_core_web_trf. Benepar: benepar_zh2, benepar_en3
+- Corresponding spacy [7] and benepar [8] models need to be downloaded. Spacy:zh_core_web_trf, en_core_web_trf. Benepar: benepar_zh2, benepar_en3
 
 ## Analyse a single dataset
 To check a single dataset, simply go to app directory and run check_dataset.py
@@ -86,5 +86,5 @@ You only have to modify 'data_path1' and 'data_path2' in each cell. Below we sho
 Vancouver
 - \[6\]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7307783/
 - \[7\]: https://spacy.io/models
-- \[8\]: 
+- \[8\]: https://github.com/nikitakit/self-attentive-parser
 
