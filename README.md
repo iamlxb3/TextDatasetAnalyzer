@@ -1,4 +1,8 @@
 # A simple tool for text dataset analysis
+[![CircleCI](https://circleci.com/gh/iamlxb3/TextDatasetAnalyzer/tree/main.svg?style=svg)](https://circleci.com/gh/iamlxb3/TextDatasetAnalyzer/tree/main)
+[![Issue](https://img.shields.io/github/issues/iamlxb3/TextDatasetAnalyzer)](https://img.shields.io/github/issues/iamlxb3/TextDatasetAnalyzer)
+[![License](https://img.shields.io/github/license/iamlxb3/TextDatasetAnalyzer)](https://img.shields.io/github/license/iamlxb3/TextDatasetAnalyzer)
+
 ## Overview
 This project is designed to:
 1. Simply analyse a single text dataset.
